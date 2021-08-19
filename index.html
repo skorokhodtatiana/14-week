@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <!-- <p>Сложение:</p> -->
+        <label for="oneNumber">Введите первую цифру</label>
+        <input type="number" id="oneNumber" value="" />
+        <label for="twoNumber">Введите вторую цифру</label>
+        <input type="number" id="twoNumber" />
+        <input onClick="saveResult()" type="button" value="Результат" />
+        <label for="derivation">Сложение</label>
+        <input readonly type="text" id="derivation" value="" />
+        <br>
+        <input onClick="subtraction()" type="button" value="Результат" />
+        <label for="derivation2">Вычитание</label>
+        <input readonly type="text" id="derivation2" value="" />
+        <br>
+        <input onClick = "division()" type="button" value="Результат" />
+        <label for="derivation3">Деление</label>
+        <input readonly type="text" id="derivation3" value="" />
+        <br>
+        <input onClick = "multiplication()" type="button" value="Результат" />
+        <label for="derivation3">Умножение</label>
+        <input readonly type="text" id="derivation4" value="" />
+    </form>
+    <script src="./index14week.js"></script>
+</body>
+
+</html>

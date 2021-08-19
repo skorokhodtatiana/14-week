@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/carousel.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="gallery">
+            <div class="photos">
+                <img src="./image/cat1.jpg">
+                <img src="./image/cat2.jpg">
+                <!-- <img src="./image/cat3.jpg"> -->
+            </div>
+            <div class="buttons">
+                <button class="prev">Назад</button>
+                <button class="next">Вперед</button>
+            </div>
+        </div>
+
+        <script>
+            let btn_prev = document.querySelector('#gallery .buttons .prev');
+            // let btn_prev = document.getElementsByClassName('prev');
+            console.log(btn_prev);
+            let btn_next = document.querySelector('#gallery .buttons .next');
+            // let btn_next = document.getElementsByClassName('next');
+            console.log(btn_next);
+            let images = document.querySelectorAll('#gallery .photos img');
+            console.log(images);
+
+            btn_next.onclick = function(){
+            let i = 0;
+            images[i].style.display = 'none';
+            i++;
+            images[i].style.display = 'block';
+            if(i >= images.length){
+                i = 0;
+            }
+        }
+
+            btn_prev.onclick = function(){
+                i = 1;
+    images[i].style.display = 'none';
+    i = i - 1;
+    if(i < 0){
+        i = images.length - 1;
+    }
+    images[i].style.display = 'block';
+}
+
+        </script>
+
+    </body>
+    </html>
